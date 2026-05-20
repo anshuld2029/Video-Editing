@@ -11,7 +11,9 @@ import { z } from "zod";
 export const myVideoSchema = z.object({
   title: z.string(),
   subtitle: z.string(),
-  videoSrc: z.string().describe("File in public/ — e.g. myvideo.mp4"),
+  videoSrc: z
+    .string()
+    .describe("File in public/ — e.g. myvideo.mp4. Leave empty for none."),
 });
 
 export const MyVideo: React.FC<z.infer<typeof myVideoSchema>> = ({
@@ -41,10 +43,18 @@ export const MyVideo: React.FC<z.infer<typeof myVideoSchema>> = ({
   );
 
   return (
-    <AbsoluteFill style={{ backgroundColor: "black" }}>
-      <AbsoluteFill style={{ opacity: fadeOut }}>
-        <OffthreadVideo src={staticFile(videoSrc)} />
-      </AbsoluteFill>
+    <AbsoluteFill
+      style={{
+        background: videoSrc
+          ? "black"
+          : "linear-gradient(135deg, #1e3a8a 0%, #7c3aed 100%)",
+      }}
+    >
+      {videoSrc ? (
+        <AbsoluteFill style={{ opacity: fadeOut }}>
+          <OffthreadVideo src={staticFile(videoSrc)} />
+        </AbsoluteFill>
+      ) : null}
 
       <AbsoluteFill
         style={{

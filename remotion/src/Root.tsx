@@ -17,7 +17,7 @@ export const Root: React.FC = () => {
       defaultProps={{
         title: "My Video",
         subtitle: "Edited with Remotion",
-        videoSrc: "myvideo.mp4",
+        videoSrc: "",
       }}
     />
   );
