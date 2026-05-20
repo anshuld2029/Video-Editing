@@ -1,24 +1,34 @@
 import { Composition } from "remotion";
 import { MyVideo, myVideoSchema } from "./MyVideo";
+import { Reel, reelDuration } from "./Reel";
 
 const FPS = 30;
-const DURATION_SECONDS = 10;
 
 export const Root: React.FC = () => {
   return (
-    <Composition
-      id="MyVideo"
-      component={MyVideo}
-      durationInFrames={FPS * DURATION_SECONDS}
-      fps={FPS}
-      width={1920}
-      height={1080}
-      schema={myVideoSchema}
-      defaultProps={{
-        title: "My Video",
-        subtitle: "Edited with Remotion",
-        videoSrc: "",
-      }}
-    />
+    <>
+      <Composition
+        id="Reel"
+        component={Reel}
+        durationInFrames={reelDuration}
+        fps={FPS}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="MyVideo"
+        component={MyVideo}
+        durationInFrames={FPS * 10}
+        fps={FPS}
+        width={1920}
+        height={1080}
+        schema={myVideoSchema}
+        defaultProps={{
+          title: "My Video",
+          subtitle: "Edited with Remotion",
+          videoSrc: "",
+        }}
+      />
+    </>
   );
 };
