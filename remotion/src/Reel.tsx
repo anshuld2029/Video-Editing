@@ -60,12 +60,6 @@ const CAPTIONS: {
 }[] = [
   { from: 2, dur: 28, text: "POV: ghar mein\ndesi pasta", style: "hook" },
   { from: 32, dur: 55, text: "DESI PASTA", style: "title" },
-  { from: 92, dur: 50, text: "ingredients ready", style: "tag" },
-  { from: 152, dur: 50, text: "thoda yeh,\nthoda woh", style: "tag" },
-  { from: 215, dur: 60, text: "tadka maaro", style: "tag" },
-  { from: 325, dur: 60, text: "pasta dalo", style: "tag" },
-  { from: 430, dur: 60, text: "creamy magic", style: "tag" },
-  { from: 540, dur: 50, text: "almost ready", style: "tag" },
   { from: TOTAL - 75, dur: 70, text: "tum bhi try karo", style: "end", sub: "save kar lo" },
 ];
 
