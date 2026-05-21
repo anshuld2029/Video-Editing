@@ -1,6 +1,6 @@
 import { Composition } from "remotion";
 import { MyVideo, myVideoSchema } from "./MyVideo";
-import { Reel, reelDuration } from "./Reel";
+import { Reel, reelDuration, reelSchema } from "./Reel";
 
 const FPS = 30;
 
@@ -14,6 +14,14 @@ export const Root: React.FC = () => {
         fps={FPS}
         width={1080}
         height={1920}
+        schema={reelSchema}
+        defaultProps={{
+          title: "Desi Pasta",
+          endLine1: "Desi Pasta",
+          endLine2: "save for later",
+          audioSrc: "",
+          audioVolume: 0.6,
+        }}
       />
       <Composition
         id="MyVideo"
