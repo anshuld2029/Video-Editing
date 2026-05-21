@@ -24,15 +24,15 @@ const OVERLAP = 15; // 0.5 s crossfade between clips
 
 // (filename in public/, duration in frames, stage label or null)
 const CLIPS: { src: string; dur: number; stage: string | null }[] = [
-  { src: "Cooking/IMG_3310.mov", dur: 150, stage: "prep" },
-  { src: "Cooking/IMG_3311.mov", dur: 120, stage: null },
-  { src: "Cooking/IMG_3312.mov", dur: 120, stage: null },
-  { src: "Cooking/IMG_6670.mov", dur: 120, stage: null },
-  { src: "Cooking/IMG_6671.mov", dur: 135, stage: "cook" },
-  { src: "Cooking/IMG_6672.mov", dur: 135, stage: null },
-  { src: "Cooking/IMG_6675.mov", dur: 135, stage: null },
-  { src: "Cooking/IMG_6676.mov", dur: 135, stage: "serve" },
-  { src: "Cooking/IMG_6677.mov", dur: 180, stage: null },
+  { src: "Cooking/IMG_3310.mp4", dur: 150, stage: "prep" },
+  { src: "Cooking/IMG_3311.mp4", dur: 120, stage: null },
+  { src: "Cooking/IMG_3312.mp4", dur: 120, stage: null },
+  { src: "Cooking/IMG_6670.mp4", dur: 120, stage: null },
+  { src: "Cooking/IMG_6671.mp4", dur: 135, stage: "cook" },
+  { src: "Cooking/IMG_6672.mp4", dur: 135, stage: null },
+  { src: "Cooking/IMG_6675.mp4", dur: 135, stage: null },
+  { src: "Cooking/IMG_6676.mp4", dur: 135, stage: "serve" },
+  { src: "Cooking/IMG_6677.mp4", dur: 180, stage: null },
 ];
 
 const STARTS: number[] = [];
