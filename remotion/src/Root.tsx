@@ -16,9 +16,6 @@ export const Root: React.FC = () => {
         height={1920}
         schema={reelSchema}
         defaultProps={{
-          title: "Desi Pasta",
-          endLine1: "Desi Pasta",
-          endLine2: "save for later",
           audioSrc: "",
           audioVolume: 0.6,
         }}
